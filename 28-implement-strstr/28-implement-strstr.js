@@ -1,20 +1,22 @@
 var strStr = function(haystack, needle) {
     let total=0;
+    let needleLength= needle.length
+    let stackLength=haystack.length
     let index=-1;
     if(needle===""){
         return 0;
     }
 
-    if(needle.length>haystack.length){
+    if(needleLength>stackLength){
         return -1;
     }
     if(haystack===needle){
         return 0;
     }
 
-    for(let i=0;i<haystack.length;i++){
+    for(let i=0;i<stackLength;i++){
        if(haystack.charAt(i)===needle.charAt(0)){
-        for(let j=0;j<needle.length;j++){
+        for(let j=0;j<needleLength;j++){
             if(haystack.charAt(i+j)===needle.charAt(j)){
                 
                 total++
@@ -23,7 +25,7 @@ var strStr = function(haystack, needle) {
                 continue
             }
         }
-        if(total===needle.length){
+        if(total===needleLength){
             return i;
         }
        }
