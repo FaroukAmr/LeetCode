@@ -4,5 +4,5 @@ var lengthOfLastWord = function(s) {
     if(myArray[i]!=""){
         return myArray[i].length;
     }
- }
+ };
 };
