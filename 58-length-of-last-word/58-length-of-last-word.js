@@ -3,7 +3,7 @@ var lengthOfLastWord = function(s) {
  console.log(myArray)
  for(let i=myArray.length-1; i>=0;i--){
     if(myArray[i]!=""){
-        return myArray[i].length
+        return myArray[i].length;
     }
  }
 };
