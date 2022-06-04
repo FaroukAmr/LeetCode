@@ -5,8 +5,5 @@ var removeElement = function(nums, val) {
            i--;
        }
    }
-
-
-    return nums.length
-    
+    return nums.length;
 };
