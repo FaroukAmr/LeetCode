@@ -21,8 +21,8 @@ var isValid = function(s) {
                 stack.push(s.charAt(i))
        }
    }
-   if(stack.length==0){
-       return true
+   if(stack.length===0){
+       return true;
    }
    return false;
 }
