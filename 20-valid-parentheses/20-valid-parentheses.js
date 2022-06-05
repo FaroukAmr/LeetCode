@@ -1,22 +1,22 @@
 var isValid = function(s) {
-   let stack =[]
+   let stack =[];
    for(let i=0;i<s.length;i++){
        switch(s.charAt(i)){
            case ")":
                if(stack.pop()!="("){
                    return false;
                }
-               break
+               break;
             case "]":
                 if(stack.pop()!="["){
                     return false;
                 }
-                break
+                break;
             case "}":
                 if(stack.pop()!="{"){
                     return false;
                 }
-                break
+                break;
             default:
                 stack.push(s.charAt(i));
        }
