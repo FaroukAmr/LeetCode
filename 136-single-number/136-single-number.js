@@ -1,13 +1,12 @@
 var singleNumber = function(nums) {
-    let stack=[]
-    let index=-1;
-    for(let i=0;i<nums.length;i++){
-        if(stack.includes(nums[i])){
-            index=stack.indexOf(nums[i]);
-            stack.splice(index,1);
-        }else{
-            stack.push(nums[i]);
+    nums.sort()
+    for(let i=0;i<nums.length-1;i++){
+        if(i%2!=0){
+            continue;
+        }
+        if(nums[i]!=nums[i+1]){
+            return nums[i];
         }
     }
-    return stack
+    return nums.pop();
 };
