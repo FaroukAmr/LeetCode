@@ -18,7 +18,7 @@ var isValid = function(s) {
                 }
                 break;
             default:
-                stack.push(s.charAt(i))
+                stack.push(s.charAt(i));
        }
    }
    if(stack.length===0){
